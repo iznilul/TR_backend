@@ -1,0 +1,4 @@
+# Project exclude paths
+/TR_backend-admin/target/
+/TR_backend-common/target/
+/TR_backend-web/target/
