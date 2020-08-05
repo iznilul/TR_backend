@@ -29,8 +29,8 @@ public class HospitalController {
     HospitalServiceImpl hospitalServiceImpl;
 
     @ApiOperation("地点查询通过推荐值")
-    @PostMapping("QueryHospitelListByReCommands")
-    ResultKit<Object> QueryHospitelListByReCommands(@RequestBody QueryIndustry queryIndustry) {
+    @PostMapping("QueryHospitalListByReCommands")
+    ResultKit<Object> QueryHospitelListByReCommands( QueryIndustry queryIndustry) {
         ResultKit<Object> resultKit = new ResultKit<>();
         if (queryIndustry.getSize() != null) {
             PageHelper.startPage(1, queryIndustry.getSize());

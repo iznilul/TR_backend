@@ -32,7 +32,7 @@ public class AttractionController {
 
     @ApiOperation("地点查询通过推荐值")
     @PostMapping("QueryAttractionByRecommends")
-    ResultKit<Object> QueryAttractionByRecommends(@RequestBody QueryIndustry queryIndustry) {
+    ResultKit<Object> QueryAttractionByRecommends(QueryIndustry queryIndustry) {
         ResultKit<Object> resultKit = new ResultKit<>();
         if (queryIndustry.getSize() != null){
             PageHelper.startPage(1, queryIndustry.getSize());

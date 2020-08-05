@@ -27,7 +27,7 @@ public class RestaurantController {
 
     @ApiOperation("地点查询（可选择是否根据价钱排序）")
     @PostMapping("QueryRestaurantListByPrice")
-    ResultKit<Object> QueryRestaurantListByPrice(@RequestBody QueryIndustry queryIndustry) {
+    ResultKit<Object> QueryRestaurantListByPrice(QueryIndustry queryIndustry) {
         ResultKit<Object> resultKit = new ResultKit<>();
         if (queryIndustry.getSize() != null) {
             PageHelper.startPage(1, queryIndustry.getSize());
@@ -44,7 +44,7 @@ public class RestaurantController {
 
     @ApiOperation("地点查询(通过推荐值)")
     @PostMapping("QueryRestaurantListByRecommends")
-    ResultKit<Object> QueryRestaurantListByRecommends(@RequestBody QueryIndustry queryIndustry) {
+    ResultKit<Object> QueryRestaurantListByRecommends(QueryIndustry queryIndustry) {
         ResultKit<Object> resultKit = new ResultKit<>();
         if (queryIndustry.getSize() != null) {
             PageHelper.startPage(1, queryIndustry.getSize());

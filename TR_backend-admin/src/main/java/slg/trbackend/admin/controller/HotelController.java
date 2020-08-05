@@ -32,7 +32,7 @@ public class HotelController {
 
     @ApiOperation("地点查询（可选择是否根据价钱排序）")
     @PostMapping("queryHotelByPrice")
-    ResultKit<Object> queryHotelByPrice(@RequestBody QueryIndustry queryIndustry) {
+    ResultKit<Object> queryHotelByPrice(QueryIndustry queryIndustry) {
 
         ResultKit<Object> resultKit = new ResultKit<>();
         PageHelper.startPage(1, queryIndustry.getSize());
@@ -45,8 +45,8 @@ public class HotelController {
     }
 
     @ApiOperation("地点查询(通过推荐值)")
-    @PostMapping("queryHotelByRecommadn")
-    ResultKit<Object> queryHotelByRecommadn(@RequestBody QueryIndustry queryIndustry) {
+    @PostMapping("queryHotelByRecommends")
+    ResultKit<Object> queryHotelByRecommadn(QueryIndustry queryIndustry) {
         ResultKit<Object> resultKit = new ResultKit<>();
         if (queryIndustry.getSize() != null) {
             PageHelper.startPage(1, queryIndustry.getSize());

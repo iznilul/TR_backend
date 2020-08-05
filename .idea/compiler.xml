@@ -7,9 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tr-backend-admin" />
+        <module name="tr_backend-web" />
+        <module name="TR_backend-admin" />
         <module name="TR_backend-web" />
         <module name="TR_backend-common" />
-        <module name="TR_backend-admin" />
+        <module name="tr_backend-common" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +21,9 @@
       <module name="TR_backend-admin" options="-parameters" />
       <module name="TR_backend-common" options="-parameters" />
       <module name="TR_backend-web" options="-parameters" />
+      <module name="tr-backend-admin" options="-parameters" />
+      <module name="tr_backend-common" options="-parameters" />
+      <module name="tr_backend-web" options="-parameters" />
     </option>
   </component>
 </project>

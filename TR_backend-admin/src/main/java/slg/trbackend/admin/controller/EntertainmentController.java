@@ -31,7 +31,7 @@ public class EntertainmentController {
 
     @ApiOperation("地点查询通过推荐值")
     @PostMapping("queryEntertainmentListByRecommands")
-    ResultKit<Object> queryEntertainmentListByRecommands(@RequestBody QueryIndustry queryIndustry) {
+    ResultKit<Object> queryEntertainmentListByRecommands( QueryIndustry queryIndustry) {
         ResultKit<Object> resultKit = new ResultKit<>();
         if (queryIndustry.getSize() != null) {
             PageHelper.startPage(1, queryIndustry.getSize());

@@ -17,15 +17,15 @@
   <select id="queryRestaurantList" resultMap="BaseResultMap" parameterType="slg.trbackend.admin.entity.QueryIndustry">
     select  name , province ,city , area , address , location_lat , location_lng , price from  restaurant
     <where >
-      <if test="ScenicAreaProvince != null">
+      <if test="ScenicAreaProvince != null and ScenicAreaProvince != ''">
         and  province = #{ScenicAreaProvince}
       </if>
 
-      <if test="ScenicAreaCity != null">
+      <if test="ScenicAreaCity != null and ScenicAreaCity != ''">
         and city = #{ScenicAreaCity}
       </if>
 
-      <if test="ScenicAreaArea != null">
+      <if test="ScenicAreaArea != null and ScenicAreaArea != ''">
         and area = #{ScenicAreaArea}
       </if>
         ORDER BY price asc
@@ -35,17 +35,17 @@
 
     <select id="queryRestaurantListByRecommends" resultMap="BaseResultMap" parameterType="slg.trbackend.admin.entity.QueryIndustry">
       select restaurantuser.recommend as recommends,
-      name , province ,city , area , address , location_lat , location_lng
+      name , province ,city , area , address , location_lat , location_lng,price
       from  restaurant join restaurantuser ON restaurant.restaurantId = restaurantuser.restaurantId
-      <if test="ScenicAreaProvince != null">
+      <if test="ScenicAreaProvince != null and ScenicAreaProvince != ''">
         and  province = #{ScenicAreaProvince}
       </if>
 
-      <if test="ScenicAreaCity != null">
+      <if test="ScenicAreaCity != null and ScenicAreaCity != ''">
         and city = #{ScenicAreaCity}
       </if>
 
-      <if test="ScenicAreaArea != null">
+      <if test="ScenicAreaArea != null and ScenicAreaArea != ''">
         and area = #{ScenicAreaArea}
       </if>
       ORDER BY recommends DESC
