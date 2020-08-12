@@ -30,18 +30,6 @@ public class TrainQuery implements Serializable {
     private String EndTrainstation;
 
     @ApiModelProperty(value = "推荐依据1")
-    private String recommand1;
-
-    @ApiModelProperty(value = "推荐依据2")
-    private String recommand2;
-
-    @ApiModelProperty(value = "推荐依据3")
-    private String recommand3;
-
-    @ApiModelProperty(value = "推荐依据4")
-    private String recommand4;
-
-    @ApiModelProperty(value = "推荐依据5")
-    private String recommand5;
+    private Integer recommand;
 
 }
