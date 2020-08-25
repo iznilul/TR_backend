@@ -19,15 +19,15 @@
         select entertainmentuser.recommend as recommends,
         name , province ,city , area , address , location_lat , location_lng
         from  entertainment join entertainmentuser ON entertainment.entertainmentId = entertainmentuser.entertainmentId
-        <if test="ScenicAreaProvince != null">
+        <if test="ScenicAreaProvince != null and ScenicAreaProvince != ''">
             and  province = #{ScenicAreaProvince}
         </if>
 
-        <if test="ScenicAreaCity != null">
+        <if test="ScenicAreaCity != null and ScenicAreaCity != ''">
             and city = #{ScenicAreaCity}
         </if>
 
-        <if test="ScenicAreaArea != null">
+        <if test="ScenicAreaArea != null and ScenicAreaArea != '' ">
             and area = #{ScenicAreaArea}
         </if>
         ORDER BY recommends DESC

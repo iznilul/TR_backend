@@ -18,15 +18,15 @@
     select attractionuser.recommend as recommends,
       name , province ,city , area , address , location_lat , location_lng
       from  attraction join attractionuser ON attraction.attractionId = attractionuser.attractionId
-      <if test="ScenicAreaProvince != null">
+      <if test="ScenicAreaProvince != null and ScenicAreaProvince != ''">
         and  province = #{ScenicAreaProvince}
       </if>
 
-      <if test="ScenicAreaCity != null">
+      <if test="ScenicAreaCity != null and ScenicAreaCity != ''">
         and city = #{ScenicAreaCity}
       </if>
 
-      <if test="ScenicAreaArea != null">
+      <if test="ScenicAreaArea != null and ScenicAreaArea != '' ">
         and area = #{ScenicAreaArea}
       </if>
       ORDER BY recommends DESC
