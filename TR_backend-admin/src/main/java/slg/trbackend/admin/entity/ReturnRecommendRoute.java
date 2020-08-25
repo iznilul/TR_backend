@@ -5,6 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.sql.Date;
+
 /**
  * @author Administrator
  */
@@ -35,6 +37,15 @@ public class ReturnRecommendRoute {
 
     @ApiModelProperty(value = "推荐值总分")
     private double recommad;
+
+    @ApiModelProperty(value = "车辆名称")
+    private String VehicleName;
+
+    @ApiModelProperty(value = "出发时间")
+    private String departureTime;
+
+    @ApiModelProperty(value = "结束时间")
+    private String ArriveTime;
 
     @ApiModelProperty(value = "价格")
     private double thePrice;

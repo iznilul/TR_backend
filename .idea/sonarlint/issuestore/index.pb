@@ -99,3 +99,17 @@ OTR_backend-web/src/main/java/slg/trbackend/web/Interceptor/MainInterceptor.java
 VTR_backend-web/src/main/java/slg/trbackend/web/Interceptor/GlobalExceptionHandler.java,2\c\2c926ff7d0057dce1c0a366760d66208dc079c18
 x
 HTR_backend-web/src/main/java/slg/trbackend/web/config/SwaggerConfig.java,6\f\6fc4508eb67cbfa817a68ce937a75982cf2bc24e
+|
+LTR_backend-admin/src/main/java/slg/trbackend/admin/entity/QueryIndustry.java,7\3\738e059efb535f1432236b426b5fdad901da127e
+y
+ITR_backend-admin/src/main/java/slg/trbackend/admin/entity/TrainQuery.java,2\b\2b21e093c70ee7adc254e24952e9bfb37e74213b
+Å
+QTR_backend-admin/src/main/java/slg/trbackend/admin/mapper/TrainStationMapper.java,b\7\b70dd7afd0cbbaa0f57ded3591c169fa098bcd54
+Ä
+PTR_backend-admin/src/main/java/slg/trbackend/admin/mapper/TrainStationMapper.xml,8\1\81763b2872753f40540165a88b652e9ba19e6d9f
+ã
+[TR_backend-admin/src/main/java/slg/trbackend/admin/mapper/IndirectJourneysDealedMapper.java,d\a\da2bb9bdb4f5d2702a5c137519dec8e9f4f348f4
+ä
+ZTR_backend-admin/src/main/java/slg/trbackend/admin/mapper/IndirectJourneysDealedMapper.xml,1\b\1bb229d994a2244bba57e169ee99a338fd1fb448
+É
+STR_backend-admin/src/main/java/slg/trbackend/admin/entity/ReturnRecommendRoute.java,8\a\8a4e9b8fc8064ec25f662d4a5216c84562e27adf

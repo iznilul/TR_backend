@@ -27,7 +27,7 @@
             and city = #{ScenicAreaCity}
         </if>
 
-        <if test="ScenicAreaArea != null and ScenicAreaArea != ''">
+        <if test="ScenicAreaArea != null and ScenicAreaArea != '' ">
             and area = #{ScenicAreaArea}
         </if>
         ORDER BY recommends DESC

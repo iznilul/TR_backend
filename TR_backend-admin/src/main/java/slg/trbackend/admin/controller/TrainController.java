@@ -45,11 +45,15 @@ public class TrainController {
 
         trainQuery.setStartAndEndCity(trainQuery.getStartCity()+"——"+trainQuery.getEndCity());
         ResultKit<Object> resultKit = new ResultKit<>();
+
         PageHelper.startPage(1, 3);
         List<ReturnRecommendRoute> returnRecommendRoutes = journeysDealedService.QueryJourneysDealedListByrecommand(trainQuery);
         new PageInfo(returnRecommendRoutes);
+
+        PageHelper.startPage(1,3);
         List<ReturnRecommendRoute> indirectreturnRecommendRoutes = indirectJourneysDealedService.QueryIndirectJourneysDealedListByrecommand(trainQuery);
         new PageInfo(indirectreturnRecommendRoutes);
+
         returnRecommendRoutes.addAll(indirectreturnRecommendRoutes);
         resultKit.setCode(ResultCode.SUCCESS.code());
         resultKit.setMessage("查询成功");
@@ -63,10 +67,10 @@ public class TrainController {
     ResultKit<Object> queryByPrice(@RequestBody TrainQuery trainQuery) {
         trainQuery.setStartAndEndCity(trainQuery.getStartCity()+"——"+trainQuery.getEndCity());
         ResultKit<Object> resultKit = new ResultKit<>();
-        PageHelper.startPage(1, 5);
         PageHelper.startPage(1, 3);
         List<ReturnRecommendRoute> returnRecommendRoutes = journeysDealedService.QueryJourneysDealedListByprice(trainQuery);
         new PageInfo(returnRecommendRoutes);
+        PageHelper.startPage(1, 3);
         List<ReturnRecommendRoute> indirectreturnRecommendRoutes = indirectJourneysDealedService.QueryIndirectJourneysDealedListByprice(trainQuery);
         new PageInfo(indirectreturnRecommendRoutes);
         returnRecommendRoutes.addAll(indirectreturnRecommendRoutes);
